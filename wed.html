@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wedding Invitation – Bhumika & Sharan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="You are warmly invited to celebrate the wedding of Bhumika and Sharan."
+  />
+
+  <style>
+    /* Fancy fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Quicksand:wght@400;500&display=swap');
+
+    :root {
+      --bg: #f8f3ec;
+      --bg-soft: #f3e4da;
+      --primary: #c38a6a;
+      --primary-soft: #e3bfa2;
+      --primary-dark: #9a6542;
+      --accent-pink: #f3b9b0;
+      --text-main: #2f2520;
+      --text-soft: #74635a;
+      --card-bg: #fffbf7;
+      --border-soft: rgba(195, 138, 106, 0.35);
+      --radius-xl: 26px;
+      --shadow-soft: 0 22px 50px rgba(0, 0, 0, 0.16);
+      --font-main: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      --font-script: "Playfair Display", "Georgia", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background:
+        radial-gradient(circle at top left, #fff7ef 0, #f8f3ec 40%, #f4e7dd 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---------- GLOBAL LAYOUT ---------- */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    section {
+      padding: 4.5rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 5.5rem 3rem;
+      }
+    }
+
+    /* soft ornament glows on sections */
+    section::before,
+    section::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.22;
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: blur(0.3px);
+    }
+
+    section::before {
+      top: -40px;
+      left: -40px;
+      width: 190px;
+      height: 190px;
+      background-image: radial-gradient(circle at center, #e5c6aa, transparent 60%);
+    }
+
+    section::after {
+      bottom: -60px;
+      right: -30px;
+      width: 230px;
+      height: 230px;
+      background-image: radial-gradient(circle at center, #f3d7c4, transparent 65%);
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-heading {
+      text-align: center;
+      font-size: 1.1rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: var(--font-script);
+      font-size: 2.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .section-divider span {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      content: "";
+      height: 1px;
+      width: 70px;
+      background: linear-gradient(to right, transparent, var(--primary-soft));
+    }
+
+    .section-divider::after {
+      background: linear-gradient(to left, transparent, var(--primary-soft));
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0.2rem 0.9rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: rgba(255, 250, 245, 0.96);
+      color: var(--text-soft);
+      backdrop-filter: blur(12px);
+    }
+
+    /* ---------- SIMPLE TOP NAV ---------- */
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        to right,
+        rgba(248, 243, 236, 0.94),
+        rgba(247, 238, 231, 0.96)
+      );
+      border-bottom: 1px solid rgba(195, 138, 106, 0.16);
+    }
+
+    .top-nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .top-nav-inner {
+        padding: 0.7rem 3rem;
+      }
+    }
+
+    .nav-brand {
+      font-family: var(--font-script);
+      font-size: 1.4rem;
+      letter-spacing: 0.05em;
+      color: var(--primary-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.9rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-soft);
+      position: relative;
+      padding-bottom: 0.2rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 0;
+      background: var(--primary-dark);
+      transition: width 0.18s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- HERO (NO VIDEO) ---------- */
+
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top right, #fceee3 0, transparent 55%),
+        radial-gradient(circle at bottom left, #f5e1d4 0, transparent 55%);
+    }
+
+    .hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-card {
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: 32px;
+      padding: 2.9rem 2.4rem 2.6rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      animation: floatCard 5s ease-in-out infinite alternate;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .hero-card::before {
+      top: -120px;
+      right: -80px;
+      width: 260px;
+      height: 260px;
+    }
+
+    .hero-card::after {
+      bottom: -150px;
+      left: -60px;
+      width: 310px;
+      height: 310px;
+    }
+
+    @keyframes floatCard {
+      0% {
+        transform: translateY(0);
+        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.16);
+      }
+      100% {
+        transform: translateY(-6px);
+        box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22);
+      }
+    }
+
+    .hero-topline {
+      display: inline-flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-topline span {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .hero-divider {
+      width: 32px;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-names {
+      font-family: var(--font-script);
+      font-size: clamp(2.8rem, 5vw, 3.5rem);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+
+    .hero-names::after {
+      content: "❦";
+      display: block;
+      font-size: 1.2rem;
+      margin-top: 0.35rem;
+      color: var(--primary-dark);
+    }
+
+    .hero-ampersand {
+      font-family: var(--font-script);
+      font-size: 1.8rem;
+      margin-inline: 0.5rem;
+      color: var(--primary-dark);
+    }
+
+    .hero-caption {
+      font-size: 0.96rem;
+      color: var(--text-soft);
+      margin-bottom: 0.9rem;
+      text-align: center;
+    }
+
+    .hero-quote {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: var(--text-soft);
+      margin-bottom: 1.9rem;
+      text-align: center;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .hero-meta-item {
+      min-width: 150px;
+      text-align: center;
+    }
+
+    .meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.72rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .meta-value {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.9rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 0.7rem 1.8rem;
+      font-size: 0.85rem;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.2s ease,
+        opacity 0.16s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.27);
+    }
+
+    .btn-ghost {
+      background: #fff7f0;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      color: var(--text-main);
+    }
+
+    .btn-ghost:hover {
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* ---------- STORY SECTION ---------- */
+
+    .story-grid {
+      display: flex;
+      justify-content: center;
+    }
+
+    .story-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      padding: 2.4rem 2rem;
+      border: 1px solid rgba(201, 162, 127, 0.3);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+      position: relative;
+      max-width: 650px;
+      text-align: center;
+    }
+
+    .story-card::before {
+      content: "";
+      position: absolute;
+      inset: 1.2rem;
+      border-radius: calc(var(--radius-xl) - 12px);
+      border: 1px dashed rgba(201, 162, 127, 0.45);
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .story-card p {
+      color: var(--text-soft);
+      font-size: 0.98rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .story-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .story-highlight {
+      font-family: var(--font-script);
+      font-size: 1.8rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .story-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1.7rem;
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      justify-content: center;
+    }
+
+    .story-meta dt {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .story-meta dd {
+      margin-left: 0;
+    }
+
+    /* (Story photo CSS kept but unused now, fine to remove if you want)
+    .story-photo { ... }
+    */
+
+    /* ---------- EVENTS SECTION ---------- */
+
+    .events {
+      background: radial-gradient(circle at top left, #f7eee5, #f7f2ec);
+      border-top: 1px solid rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .events-grid {
+      display: grid;
+      gap: 1.9rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .event-card {
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 20px;
+      padding: 1.7rem 1.4rem 1.6rem;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      transform: translateY(0);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease,
+        background 0.18s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(to right, var(--accent-pink), var(--primary-soft));
+      opacity: 0.85;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
+      border-color: rgba(201, 162, 127, 0.6);
+      background: #fffaf6;
+    }
+
+    .event-name {
+      font-weight: 600;
+      font-size: 1.04rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .event-time {
+      font-size: 0.9rem;
+      color: var(--primary-dark);
+    }
+
+    .event-detail {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+    }
+
+    .event-location {
+      font-size: 0.88rem;
+      margin-top: 0.2rem;
+    }
+
+    /* ---------- LOCATION SECTION ---------- */
+
+    .location-grid {
+      display: grid;
+      gap: 2.2rem;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 900px) {
+      .location-grid {
+        grid-template-columns: 1.2fr 1.4fr;
+      }
+    }
+
+    .location-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      padding: 2.1rem 2rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .location-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 55px rgba(0, 0, 0, 0.18);
+      border-color: rgba(201, 162, 127, 0.6);
+      background: #fffaf6;
+    }
+
+    .location-card h3 {
+      margin-bottom: 0.6rem;
+      font-size: 1.15rem;
+    }
+
+    .location-card p {
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+
+    .location-meta {
+      margin-top: 1.4rem;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .map-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+      min-height: 280px;
+      background: #e8ddd3;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .map-frame:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 55px rgba(0, 0, 0, 0.18);
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ---------- RSVP SECTION ---------- */
+
+    .rsvp {
+      background: radial-gradient(circle at top, #f8eee6, #f7f2ec);
+    }
+
+    .rsvp-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      padding: 2.4rem 2.1rem 2.1rem;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .rsvp-title {
+      font-family: var(--font-script);
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .rsvp-sub {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-bottom: 1.5rem;
+    }
+
+    .rsvp-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-soft);
+    }
+
+    .rsvp-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .rsvp-phones {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .rsvp-phones div {
+      margin-bottom: 0.2rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      padding: 2.4rem 1.5rem 2.6rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      background: linear-gradient(to right, #f5ece4, #f8f0ea);
+      border-top: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .footer-heart {
+      font-size: 1.1rem;
+      margin: 0 0.25rem;
+    }
+
+    .footer-names {
+      font-family: var(--font-script);
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+    }
+
+    .footer-line {
+      font-size: 0.86rem;
+      margin-top: 0.4rem;
+    }
+
+    /* ---------- SMALL UTILITIES ---------- */
+
+    a {
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Top Navigation -->
+    <header class="top-nav">
+      <div class="top-nav-inner">
+        <div class="nav-brand">Bhumika &amp; Sharan</div>
+        <nav class="nav-links">
+          <a href="#story">Story</a>
+          <a href="#details">Events</a>
+          <a href="#location">Location</a>
+          <a href="#rsvp">RSVP</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO (Centered Card) -->
+      <section class="hero" id="top">
+        <div class="container hero-inner">
+          <div class="hero-card">
+            <div class="hero-topline">
+              <span>We Invite You To</span>
+              <div class="hero-divider"></div>
+              <span>Our Wedding</span>
+            </div>
+
+            <h1 class="hero-names">
+              Bhumika
+              <span class="hero-ampersand">&amp;</span>
+              Sharan
+            </h1>
+
+            <p class="hero-caption">
+              Together with their families, Bhumika and Sharan invite you to share
+              in the joy of their wedding celebration.
+            </p>
+
+            <p class="hero-quote">
+              “Two hearts, one soul, and a lifetime of little moments stitched together in love.”
+            </p>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <div class="meta-label">Wedding Date</div>
+                <div class="meta-value">Wednesday, 26 November 2025</div>
+              </div>
+              <div class="hero-meta-item">
+                <div class="meta-label">Main Celebration</div>
+                <div class="meta-value">Reception of Baraat · 8:00 PM</div>
+              </div>
+              <div class="hero-meta-item">
+                <div class="meta-label">Venue</div>
+                <div class="meta-value">
+                  Metro pillar no. 52–55, adjoining Crystal Toyota,<br />
+                  Jhilmil Industrial Area, Jhilmil Colony,<br />
+                  Delhi – 110095
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" onclick="scrollToSection('details')">
+                View Events
+              </button>
+              <button class="btn btn-ghost" type="button" onclick="scrollToSection('location')">
+                Location
+              </button>
+              <button class="btn btn-ghost" type="button" onclick="scrollToSection('rsvp')">
+                RSVP
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR STORY SECTION (CENTERED, NO IMAGE) -->
+      <section id="story">
+        <div class="container">
+          <p class="section-heading">Our Story</p>
+          <h2 class="section-title">From Strangers to Soulmates</h2>
+          <div class="section-divider"><span>❦</span></div>
+
+          <div class="story-grid">
+            <article class="story-card">
+              <p class="story-label">How it all began</p>
+              <h3 class="story-highlight">A quiet hello that changed everything</h3>
+
+              <p>
+                It started with a simple conversation, shared over smiles and
+                countless little moments. What began as friendship slowly turned
+                into something deeper, softer, and impossibly real.
+              </p>
+              <p>
+                Through late-night talks, inside jokes, and everyday chaos,
+                Bhumika and Sharan discovered a love built on patience,
+                kindness, and shared dreams.
+              </p>
+              <p>
+                Now, as they step into a new chapter, they wish to celebrate
+                this journey with the people who mean the most — you.
+              </p>
+
+              <dl class="story-meta">
+                <div>
+                  <dt>First Met</dt>
+                  <dd>A moment that changed everything</dd>
+                </div>
+                <div>
+                  <dt>First Date</dt>
+                  <dd>A day they’ll never forget</dd>
+                </div>
+                <div>
+                  <dt>Forever Begins</dt>
+                  <dd>26 November 2025 · Delhi</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENTS / SCHEDULE SECTION -->
+      <section class="events" id="details">
+        <div class="container">
+          <p class="section-heading">Events</p>
+          <h2 class="section-title">Wedding Celebrations</h2>
+          <div class="section-divider"><span>♥</span></div>
+
+          <div class="events-grid">
+            <!-- Mehandi -->
+            <div class="event-card">
+              <div class="pill">Mehandi</div>
+              <h3 class="event-name">Mehandi Night</h3>
+              <p class="event-time">Tuesday · 25 November 2025 · 6:00 PM</p>
+              <p class="event-detail">
+                An evening of music, laughter, and beautiful henna designs to
+                mark the beginning of the celebrations.
+              </p>
+              <p class="event-location">
+                Venue: Home
+              </p>
+            </div>
+
+            <!-- Chooda Ceremony -->
+            <div class="event-card">
+              <div class="pill">Chooda</div>
+              <h3 class="event-name">Chooda Ceremony</h3>
+              <p class="event-time">Wednesday · 26 November 2025 · 11:00 AM</p>
+              <p class="event-detail">
+                A traditional ceremony filled with blessings, love, and
+                family rituals as Bhumika prepares for her new journey.
+              </p>
+              <p class="event-location">
+                Venue: Home
+              </p>
+            </div>
+
+            <!-- Reception of Baraat -->
+            <div class="event-card">
+              <div class="pill">Reception</div>
+              <h3 class="event-name">Reception of Baraat</h3>
+              <p class="event-time">Wednesday · 26 November 2025 · 8:00 PM</p>
+              <p class="event-detail">
+                Welcoming the baraat with joy, rituals, and endless
+                celebrations as Bhumika &amp; Sharan unite.
+              </p>
+              <p class="event-location">
+                Venue: Metro pillar no. 52–55, adjoining Crystal Toyota,<br />
+                Jhilmil Industrial Area, Jhilmil Colony, Delhi – 110095
+              </p>
+            </div>
+
+            <!-- Doli -->
+            <div class="event-card">
+              <div class="pill">Doli</div>
+              <h3 class="event-name">Doli</h3>
+              <p class="event-time">Thursday · 27 November 2025 · 4:00 AM</p>
+              <p class="event-detail">
+                An emotional farewell as Bhumika leaves her parental home to
+                begin a new chapter with Sharan.
+              </p>
+              <p class="event-location">
+                Venue: Family Residence
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <section id="location">
+  <div class="container">
+    <p class="section-heading">Location</p>
+    <h2 class="section-title">How to Reach</h2>
+    <div class="section-divider"><span>✧</span></div>
+
+    <div class="location-grid">
+      <div class="location-card">
+        <h3>Main Wedding Venue</h3>
+        <p>
+          The Date Banquets<br />
+          Near Urban Garden, Vivek Vihar Phase 2<br />
+          Delhi – 110095
+        </p>
+
+        <div class="location-meta">
+          <p>
+            <strong>Landmark:</strong> The Date Banquets, near Urban Garden
+          </p>
+          <p>
+            <strong>Parking:</strong> Parking available at venue.
+          </p>
+          <p>
+            <strong>Dress Code:</strong> Traditional or Indo-Western recommended.
+          </p>
+          <p style="margin-top: 0.8rem;">
+            <a
+              href="https://maps.app.goo.gl/Yuejprnq7vCPRvBH9"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open in Google Maps
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="map-frame" aria-label="Venue location on map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.495530885833!2d77.3070004!3d28.6755042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb929854c179%3A0x7eeec79af1a02b4e!2sThe%20Date%20Banquets!5e0!3m2!1sen!2sin!4v1732600000000"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      <!-- RSVP SECTION -->
+      <section class="rsvp" id="rsvp">
+        <div class="container">
+          <div class="rsvp-card">
+            <h2 class="rsvp-title">RSVP</h2>
+            <p class="rsvp-sub">
+              Kindly confirm your presence and blessings with our family.
+            </p>
+
+            <ul class="rsvp-list">
+              <li>Smt. Krishna Kumari</li>
+              <li>Mrs &amp; Mr Praveen Khurana</li>
+              <li>Rounak Khurana</li>
+              <li>Mohina Khurana</li>
+            </ul>
+
+            <div class="rsvp-phones">
+              <div><strong>Phone:</strong> +91&nbsp;92894&nbsp;49072</div>
+              <div><strong>Phone:</strong> +91&nbsp;60005&nbsp;571336</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        With love,
+        <span class="footer-names">Bhumika &amp; Sharan</span>
+        <span class="footer-heart">♡</span>
+      </div>
+      <div class="footer-line">We can’t wait to celebrate with you.</div>
+    </footer>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  </script>
+</body>
+</html>
